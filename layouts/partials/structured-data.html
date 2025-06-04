@@ -1,0 +1,61 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Title }}",
+      {{ if .Site.Params.description }}"description": "{{ .Site.Params.description }}",{{ end }}
+      "publisher": {
+        "@id": "{{ .Site.BaseURL }}#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ .Site.BaseURL }}#organization",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}"{{ if .Site.Params.logo }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.Params.logo | absURL }}"
+      }{{ end }}{{ if .Site.Social }},
+      "sameAs": [
+        {{ range $key, $value := .Site.Social }}
+          {{ if eq $key "twitter" }}"https://twitter.com/{{ $value }}"{{ end }}
+          {{ if eq $key "facebook" }}"https://facebook.com/{{ $value }}"{{ end }}
+          {{ if eq $key "instagram" }}"https://instagram.com/{{ $value }}"{{ end }}
+          {{ if eq $key "linkedin" }}"https://linkedin.com/in/{{ $value }}"{{ end }}
+          {{- if ne $key (index (last 1 (sort (keys .Site.Social))) 0) }},{{ end }}
+        {{ end }}
+      ]{{ end }}
+    }{{ if not .IsHome }},
+    {
+      "@type": "Article",
+      "@id": "{{ .Permalink }}#article",
+      "headline": "{{ .Title }}",
+      "url": "{{ .Permalink }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      },
+      {{ if .Params.description }}"description": "{{ .Params.description }}",{{ end }}
+      {{ if .Params.featured_image }}"image": {
+        "@type": "ImageObject",
+        "url": "{{ .Params.featured_image | absURL }}"
+      },{{ end }}
+      "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Params.author | default .Site.Author.name | default .Site.Title }}"
+      },
+      "publisher": {
+        "@id": "{{ .Site.BaseURL }}#organization"
+      }{{ if .Params.tags }},
+      "keywords": "{{ delimit .Params.tags ", " }}"{{ end }}
+    }{{ end }}
+  ]
+}
+</script> 

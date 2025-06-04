@@ -1,0 +1,36 @@
+{{ if and (.Params.show_related | default .Site.Params.show_related_posts) (not .IsHome) }}
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ if $related }}
+        <section class="related-posts">
+            <h3 class="related-posts-title">Related Posts</h3>
+            <div class="related-posts-grid">
+                {{ range $related }}
+                    <article class="related-post-card">
+                        <a href="{{ .Permalink }}" class="related-post-link">
+                            {{ if .Params.featured_image }}
+                                <div class="related-post-image">
+                                    <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}">
+                                </div>
+                            {{ end }}
+                            <div class="related-post-content">
+                                <h4 class="related-post-title">{{ .Title }}</h4>
+                                <div class="related-post-meta">
+                                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                                    {{ if .ReadingTime }}
+                                        <span class="meta-separator">•</span>
+                                        {{ partial "reading-time.html" . }}
+                                    {{ end }}
+                                </div>
+                                {{ if .Params.summary }}
+                                    <p class="related-post-excerpt">{{ .Params.summary | truncate 80 }}</p>
+                                {{ else if .Summary }}
+                                    <p class="related-post-excerpt">{{ .Summary | truncate 80 }}</p>
+                                {{ end }}
+                            </div>
+                        </a>
+                    </article>
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
+{{ end }} 

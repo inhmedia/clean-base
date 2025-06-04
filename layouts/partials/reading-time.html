@@ -1,0 +1,8 @@
+{{ $readingTime := .ReadingTime }}
+{{ if lt $readingTime 1 }}
+    <span class="reading-time">Less than 1 min read</span>
+{{ else if eq $readingTime 1 }}
+    <span class="reading-time">1 min read</span>
+{{ else }}
+    <span class="reading-time">{{ $readingTime }} min read</span>
+{{ end }} 

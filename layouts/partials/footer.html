@@ -1,0 +1,10 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
+            {{ if .Site.Params.footer_text }}
+                <p>{{ .Site.Params.footer_text | markdownify }}</p>
+            {{ end }}
+        </div>
+    </div>
+</footer> 

@@ -1,0 +1,12 @@
+name = "clean-base"
+license = "MIT"
+licenselink = "https://github.com/inhmedia/clean-base/blob/master/LICENSE"
+description = "A clean, minimal theme with comprehensive SEO features and 6 beautiful color themes"
+homepage = "https://github.com/inhmedia/clean-base"
+tags = ["blog", "simple", "clean", "minimal", "responsive", "typography", "seo", "color-themes"]
+features = ["blog", "responsive", "color-themes", "typography", "seo", "open-graph", "twitter-cards", "canonical-urls", "custom-summaries", "flexible-permalinks"]
+min_version = "0.95.0"
+
+[author]
+  name = "Ian Howells"
+  homepage = "https://ianhowells.me" 

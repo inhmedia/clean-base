@@ -1,0 +1,93 @@
+baseURL: "https://yourdomain.com"
+languageCode: "en-us"
+title: "Clean Base Theme"
+theme: "clean-base"
+
+# Permalink structure options
+permalinks:
+  # Option 1: Use /posts/ prefix
+  posts: "/posts/:slug/"
+  # Option 2: Put everything at root (uncomment to use)
+  # posts: "/:slug/"
+  
+# Pagination
+paginate: 10
+paginatePath: "page"
+
+# Main menu
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Blog"
+      url: "/posts/"
+      weight: 2
+    - name: "About"
+      url: "/about/"
+      weight: 3
+    - name: "Contact"
+      url: "/contact/"
+      weight: 4
+
+# Theme parameters
+params:
+  # Color theme (pink, blue, green, red, orange, purple)
+  color_theme: "pink"
+  
+  # SEO Settings
+  description: "A beautiful, minimal Hugo theme with comprehensive SEO features and multiple color options."
+  seo_summary_length: 160  # Characters for meta descriptions
+  card_summary_length: 150  # Characters for post card excerpts
+  default_og_image: "/images/og-default.jpg"  # Default Open Graph image
+  
+  # Homepage settings
+  show_recent_posts: true
+  recent_posts_count: 6
+  
+  # Post page settings
+  show_related_posts: true
+  show_toc: true  # Show table of contents by default
+  
+  # Footer
+  footer_text: "Built with Hugo and Clean Base theme"
+  
+  # Logo
+  logo: "/images/logo.svg"
+
+# Social media profiles (for structured data)
+social:
+  twitter: "yourtwitterhandle"
+  facebook: "yourfacebookpage"
+  instagram: "yourinstagram"
+  linkedin: "yourlinkedin"
+
+# Taxonomy settings
+taxonomies:
+  tag: tags
+  category: categories
+
+# Related content settings
+related:
+  includeNewer: true
+  indices:
+  - name: tags
+    weight: 80
+  - name: date
+    weight: 10
+  threshold: 20
+  toLower: false
+
+# Markup settings
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # Allow HTML in markdown
+  highlight:
+    style: "github"
+    lineNos: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+  

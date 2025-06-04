@@ -1,0 +1,39 @@
+<article class="post-card">
+    <a href="{{ .Permalink }}" class="post-card-link">
+        {{ if .Params.featured_image }}
+            <div class="post-card-image">
+                <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}">
+            </div>
+        {{ end }}
+        
+        <div class="post-card-content">
+            <h3 class="post-card-title">{{ .Title }}</h3>
+            
+            {{ if .Date }}
+                <div class="post-card-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    {{ if .ReadingTime }}
+                        <span class="meta-separator">•</span>
+                        {{ partial "reading-time.html" . }}
+                    {{ end }}
+                </div>
+            {{ end }}
+            
+            {{ if .Params.summary }}
+                <p class="post-card-excerpt">{{ .Params.summary }}</p>
+            {{ else if .Summary }}
+                <p class="post-card-excerpt">{{ .Summary | truncate (.Site.Params.card_summary_length | default 150) }}</p>
+            {{ else if .Content }}
+                <p class="post-card-excerpt">{{ .Content | plainify | truncate (.Site.Params.card_summary_length | default 150) }}</p>
+            {{ end }}
+            
+            {{ if .Params.tags }}
+                <div class="post-card-tags">
+                    {{ range first 3 .Params.tags }}
+                        <span class="tag">#{{ . }}</span>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </a>
+</article> 

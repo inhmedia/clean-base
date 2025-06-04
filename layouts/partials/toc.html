@@ -1,0 +1,8 @@
+{{ if and (.Params.toc | default .Site.Params.show_toc) .TableOfContents }}
+<div class="table-of-contents">
+    <h3 class="toc-title">Table of Contents</h3>
+    <div class="toc-content">
+        {{ .TableOfContents }}
+    </div>
+</div>
+{{ end }} 
