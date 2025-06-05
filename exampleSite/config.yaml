@@ -11,8 +11,9 @@ permalinks:
   # posts: "/:slug/"
   
 # Pagination
-paginate: 10
-paginatePath: "page"
+pagination:
+  pagerSize: 10
+  path: "page"
 
 # Main menu
 menu:
@@ -57,10 +58,10 @@ params:
 
 # Social media profiles (for structured data)
 social:
-  twitter: "yourtwitterhandle"
-  facebook: "yourfacebookpage"
-  instagram: "yourinstagram"
-  linkedin: "yourlinkedin"
+  twitter: yourtwitterhandle
+  facebook: yourfacebookpage
+  instagram: yourinstagram
+  linkedin: yourlinkedin
 
 # Taxonomy settings
 taxonomies:

@@ -8,7 +8,7 @@
         fill: #333333; 
       }
       .logo-accent { 
-        fill: var(--accent-color, #d4a49a); 
+        fill: var(--accent-color, #000); 
       }
     </style>
   </defs>
