@@ -9,7 +9,7 @@ summary: ""  # Brief summary for post cards (if empty, auto-generated)
 tags: []
 author: ""
 featured_image: ""
-toc: true  # Show table of contents (overrides site default)
+toc: false  # Set to true to show collapsible table of contents
 show_related: true  # Show related posts (overrides site default)
 noindex: false  # Set to true to prevent search engine indexing
 ---

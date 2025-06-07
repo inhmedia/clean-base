@@ -9,6 +9,7 @@ summary: "A comprehensive guide covering the essential elements of contemporary 
 tags: ["design", "web development", "typography", "user experience"]
 author: "Ian Howells"
 featured_image: "/images/web-design-guide.jpg"
+toc: true
 noindex: false
 ---
 

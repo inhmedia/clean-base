@@ -278,16 +278,55 @@ a:hover {
 .table-of-contents {
     background: var(--bg-card);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 0;
     margin: 2rem 0;
     border-left: 4px solid var(--accent-color);
+    overflow: hidden;
+}
+
+.toc-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.toc-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .toc-title {
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 0;
     color: var(--text-primary);
+}
+
+.toc-arrow {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: transform 0.2s ease;
+}
+
+.toc-toggle[aria-expanded="true"] .toc-arrow {
+    transform: rotate(180deg);
+}
+
+.toc-content {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.toc-content.expanded {
+    max-height: 500px;
 }
 
 .toc-content ul {

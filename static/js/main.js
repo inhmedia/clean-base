@@ -33,4 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Table of Contents toggle functionality
+    const tocToggle = document.querySelector('.toc-toggle');
+    const tocContent = document.querySelector('.toc-content');
+    
+    if (tocToggle && tocContent) {
+        tocToggle.addEventListener('click', function() {
+            const isExpanded = tocToggle.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle the expanded state
+            tocToggle.setAttribute('aria-expanded', !isExpanded);
+            tocContent.classList.toggle('expanded');
+        });
+    }
 }); 

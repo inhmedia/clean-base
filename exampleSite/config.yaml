@@ -48,7 +48,6 @@ params:
   
   # Post page settings
   show_related_posts: true
-  show_toc: true  # Show table of contents by default
   
   # Footer
   footer_text: "Built with Hugo and Clean Base theme"
