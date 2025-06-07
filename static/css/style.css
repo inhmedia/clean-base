@@ -676,13 +676,13 @@ a:hover {
     
     .site-logo {
         flex: 1;
-        max-width: calc(100% - 60px);
+        overflow: hidden;
     }
     
     .site-logo img {
         height: auto;
         width: 100%;
-        max-width: calc(100vw - 120px);
+        max-width: none;
     }
     
     .site-logo .logo-text {
@@ -770,13 +770,13 @@ a:hover {
     }
     
     .site-logo {
-        max-width: calc(100% - 50px);
+        overflow: hidden;
     }
     
     .site-logo img {
         height: auto;
         width: 100%;
-        max-width: calc(100vw - 100px);
+        max-width: none;
     }
     
     .site-logo .logo-text {
