@@ -676,11 +676,13 @@ a:hover {
     
     .site-logo {
         flex: 1;
+        overflow: visible;
     }
     
     .site-logo img {
         width: 100%;
         height: auto;
+        overflow: visible;
     }
     
     .site-logo .logo-text {
