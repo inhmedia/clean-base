@@ -675,13 +675,12 @@ a:hover {
     }
     
     .site-logo {
-        flex-grow: 1;
+        flex: 1;
     }
     
     .site-logo img {
-        height: 60px;
-        width: auto;
-        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
     
     .site-logo .logo-text {
@@ -769,9 +768,8 @@ a:hover {
     }
     
     .site-logo img {
-        height: 50px;
-        width: auto;
-        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
     
     .site-logo .logo-text {
