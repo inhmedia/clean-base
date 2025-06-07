@@ -670,8 +670,13 @@ a:hover {
     
     .header-content {
         flex-direction: row;
-        gap: 0;
+        gap: 1rem;
         text-align: left;
+    }
+    
+    .site-logo {
+        flex: 1;
+        max-width: calc(100% - 60px);
     }
     
     .site-logo img {
@@ -681,11 +686,14 @@ a:hover {
     }
     
     .site-logo .logo-text {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        word-break: break-word;
     }
     
     .mobile-menu-toggle {
         display: flex;
+        flex-shrink: 0;
     }
     
     .main-nav {
@@ -757,14 +765,23 @@ a:hover {
         padding: 0 0.75rem;
     }
     
+    .header-content {
+        gap: 0.75rem;
+    }
+    
+    .site-logo {
+        max-width: calc(100% - 50px);
+    }
+    
     .site-logo img {
         height: 32px;
         width: auto;
-        max-width: 150px;
+        max-width: 120px;
     }
     
     .site-logo .logo-text {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        line-height: 1.1;
     }
     
     .post-title {
