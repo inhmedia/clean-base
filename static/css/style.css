@@ -677,20 +677,18 @@ a:hover {
     .site-logo {
         flex: 1;
         max-width: calc(100% - 60px);
-        background: rgba(255, 0, 0, 0.1); /* Temporary debug background */
     }
     
     .site-logo img {
-        height: 40px;
+        height: 60px;
         width: auto;
-        max-width: 200px;
+        max-width: calc(100vw - 120px);
     }
     
     .site-logo .logo-text {
-        font-size: 1.8rem !important;
+        font-size: 1.8rem;
         line-height: 1.2;
         word-break: break-word;
-        color: #d4a49a !important;
     }
     
     .mobile-menu-toggle {
@@ -776,9 +774,9 @@ a:hover {
     }
     
     .site-logo img {
-        height: 32px;
+        height: 50px;
         width: auto;
-        max-width: 120px;
+        max-width: calc(100vw - 100px);
     }
     
     .site-logo .logo-text {
