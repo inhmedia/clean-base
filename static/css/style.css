@@ -680,8 +680,8 @@ a:hover {
     }
     
     .site-logo img {
-        height: 60px;
-        width: auto;
+        height: auto;
+        width: 100%;
         max-width: calc(100vw - 120px);
     }
     
@@ -774,8 +774,8 @@ a:hover {
     }
     
     .site-logo img {
-        height: 50px;
-        width: auto;
+        height: auto;
+        width: 100%;
         max-width: calc(100vw - 100px);
     }
     
