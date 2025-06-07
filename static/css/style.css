@@ -677,6 +677,7 @@ a:hover {
     .site-logo {
         flex: 1;
         max-width: calc(100% - 60px);
+        background: rgba(255, 0, 0, 0.1); /* Temporary debug background */
     }
     
     .site-logo img {
@@ -686,9 +687,10 @@ a:hover {
     }
     
     .site-logo .logo-text {
-        font-size: 1.5rem;
+        font-size: 1.8rem !important;
         line-height: 1.2;
         word-break: break-word;
+        color: #d4a49a !important;
     }
     
     .mobile-menu-toggle {
