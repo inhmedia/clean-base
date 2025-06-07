@@ -675,14 +675,12 @@ a:hover {
     }
     
     .site-logo {
-        flex: 1;
-        overflow: hidden;
+        flex-grow: 1;
     }
     
     .site-logo img {
-        height: auto;
-        width: 100%;
-        max-width: none;
+        height: 60px;
+        width: 180px;
     }
     
     .site-logo .logo-text {
@@ -769,14 +767,9 @@ a:hover {
         gap: 0.75rem;
     }
     
-    .site-logo {
-        overflow: hidden;
-    }
-    
     .site-logo img {
-        height: auto;
-        width: 100%;
-        max-width: none;
+        height: 50px;
+        width: 150px;
     }
     
     .site-logo .logo-text {
