@@ -1,5 +1,8 @@
-<svg width="280" height="50" viewBox="0 0 280 50" xmlns="http://www.w3.org/2000/svg">
+<svg width="336" height="50" viewBox="0 0 336 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo icon/symbol -->
+  <circle cx="25" cy="25" r="12" fill="#d4a49a"/>
+  <circle cx="25" cy="25" r="7" fill="#ffffff"/>
 
   <!-- Logo text -->
-  <text x="45" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#333333" text-anchor="start">Clean Base</text>
+  <text x="55" y="40" font-family="Inter, sans-serif" font-weight="700" font-size="36" fill="#333333" text-anchor="start">Clean Base</text>
 </svg> 
