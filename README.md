@@ -1,25 +1,24 @@
 # Clean Base Hugo Theme
 
-A clean, minimal Hugo theme with comprehensive SEO features and 7 beautiful color themes. Built with modern web standards and inspired by elegant design principles.
+A minimal Hugo theme with comprehensive SEO features and 7 color themes. No JavaScript required.
 
 ![Clean Base Theme Screenshot](images/screenshot.png)
 
 ## Features
 
-- **SEO Optimized** - Complete meta tags, Open Graph, Twitter Cards, canonical URLs
+- **SEO Optimized** - Meta tags, Open Graph, Twitter Cards, canonical URLs
 - **Flexible Content** - Separate titles for display and SEO, custom summaries, slug control
-- **7 Beautiful Color Themes** (Pink, Blue, Green, Red, Orange, Purple, Tokyo Night)
-- **Responsive Design** - Mobile-first, clean typography
-- **Post Cards** - Beautiful blog post previews with smart summaries
+- **7 Color Themes** - Pink, Blue, Green, Red, Orange, Purple, Tokyo Night (default)
+- **Services Templates** - Ready-to-use templates for service businesses
+- **No JavaScript** - Pure HTML + CSS using modern techniques
+- **Responsive** - Works on all screen sizes
 - **Permalink Control** - Use `/posts/` or root-level URLs
-- **Tag Support** - Full taxonomy support with beautiful tag displays
-- **Author Support** - Author information and structured data
-- **Featured Images** - With automatic Open Graph integration
-- **Google Fonts** - Inter font for clean, modern typography
+- **Tag Support** - Full taxonomy support
+- **Featured Images** - Automatic Open Graph integration
 
 ## Installation
 
-1. Clone or download this theme to your Hugo site's `themes/` directory:
+1. Clone this theme to your Hugo site's `themes/` directory:
    ```bash
    git clone https://github.com/inhmedia/clean-base.git themes/clean-base
    ```
@@ -29,41 +28,14 @@ A clean, minimal Hugo theme with comprehensive SEO features and 7 beautiful colo
    cp themes/clean-base/exampleSite/config.yaml config.yaml
    ```
 
-3. Update your site's configuration to use the theme:
+3. Update your site's configuration:
    ```yaml
    theme: clean-base
    ```
 
-## SEO Features
-
-### Advanced Title Management
-- **`title`** - Used for page headings and as fallback for SEO title
-- **`seo_title`** - Optional separate title for `<title>` tag and social sharing
-- Automatic fallback system ensures titles are always present
-
-### Meta Descriptions
-- **`description`** - Custom meta description for SEO
-- **Auto-generation** - Falls back to summary or content excerpt
-- **Configurable length** - Set `seo_summary_length` in config
-
-### Smart Summaries
-- **`summary`** - Custom summary for post cards and social sharing
-- **Auto-excerpts** - Hugo's built-in summary or content truncation
-- **Configurable length** - Set `card_summary_length` for post cards
-
-### URL Control
-- **`slug`** - Custom URL slugs in frontmatter
-- **Flexible permalinks** - Use `/posts/` prefix or root-level URLs
-- **Canonical URLs** - Automatic canonical tag generation
-
-### Social Media Integration
-- **Open Graph** - Complete Facebook/LinkedIn sharing support
-- **Twitter Cards** - Rich Twitter card generation
-- **Structured data** - Article metadata for search engines
-
 ## Configuration
 
-### Basic Configuration
+### Basic Setup
 
 ```yaml
 # config.yaml
@@ -72,139 +44,151 @@ languageCode: "en-us"
 title: "Your Site Title"
 theme: "clean-base"
 
-# URL Structure - Choose one:
+# URL Structure
 permalinks:
-  # Option 1: Use /posts/ prefix
-  posts: "/posts/:slug/"
-  # Option 2: Root level URLs
-  # posts: "/:slug/"
+  posts: "/posts/:slug/"  # or "/:slug/" for root level
 
 params:
-  # Color theme
-  color_theme: "pink"  # pink, blue, green, red, orange, purple, tokyo-night
-  
+  # Color theme (tokyo-night is default)
+  color_theme: "tokyo-night"  # pink, blue, green, red, orange, purple, tokyo-night
+
   # SEO Settings
   description: "Your site's default meta description"
-  seo_summary_length: 160    # Meta description length
-  card_summary_length: 150   # Post card excerpt length
+  seo_summary_length: 160
+  card_summary_length: 150
   default_og_image: "/images/og-default.jpg"
-  
+
   # Content settings
   show_recent_posts: true
   recent_posts_count: 6
   show_related_posts: true
-  
+
   # Footer
   footer_text: "Built with Hugo and Clean Base theme"
   logo: "/images/logo.png"  # Optional
-
-# Navigation menu
-menu:
-  main:
-    - name: "Home"
-      url: "/"
-      weight: 1
-    - name: "Blog"
-      url: "/posts/"
-      weight: 2
-    - name: "About"
-      url: "/about/"
-      weight: 3
 ```
 
 ### Post Front Matter
 
-The theme supports comprehensive frontmatter for SEO and content control:
-
 ```yaml
 ---
-title: "Page Heading"                    # Required: Used for page heading
-seo_title: "SEO Optimized Title"         # Optional: Different title for <title> tag
-date: 2023-12-01
+title: "Page Heading"
+seo_title: "SEO Optimized Title"  # Optional
+date: 2025-11-19
 draft: false
-slug: "custom-url-slug"                  # Optional: Custom URL slug
-description: "Custom meta description"    # Optional: SEO meta description
-summary: "Brief summary for cards"       # Optional: Custom summary for post cards
-tags: ["hugo", "themes", "seo"]
+slug: "custom-url-slug"  # Optional
+description: "Meta description for SEO"  # Optional
+summary: "Summary for post cards"  # Optional
+tags: ["hugo", "themes"]
 author: "Your Name"
-featured_image: "/images/post-image.jpg"
-noindex: false                           # Optional: Prevent search indexing
+featured_image: "/images/post.jpg"
+toc: true  # Show table of contents
 ---
 ```
 
 ### Color Themes
 
-The theme includes 7 beautiful color options:
+Available themes:
 
-- <span style="display: inline-block; width: 16px; height: 16px; background-color: #d4a49a; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Pink** (`pink`) - *Default* - Soft dusty pink
-- <span style="display: inline-block; width: 16px; height: 16px; background-color: #276FBF; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Blue** (`blue`) - Professional blue
-- <span style="display: inline-block; width: 16px; height: 16px; background-color: #568259; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Green** (`green`) - Natural green
-- <span style="display: inline-block; width: 16px; height: 16px; background-color: #9A031E; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Red** (`red`) - Bold red
-- <span style="display: inline-block; width: 16px; height: 16px; background-color: #E36414; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Orange** (`orange`) - Vibrant orange
-- <span style="display: inline-block; width: 16px; height: 16px; background-color: #351431; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Purple** (`purple`) - Deep purple
-- <span style="display: inline-block; width: 16px; height: 16px; background-color: #7aa2f7; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Tokyo Night** (`tokyo-night`) - Cool blue inspired by Tokyo Night theme
+- **Pink** (`pink`) - Soft dusty pink
+- **Blue** (`blue`) - Professional blue
+- **Green** (`green`) - Natural green
+- **Red** (`red`) - Bold red
+- **Orange** (`orange`) - Vibrant orange
+- **Purple** (`purple`) - Deep purple
+- **Tokyo Night** (`tokyo-night`) - Dark theme with cool blue accent (default)
+
+## SEO Features
+
+### Title Management
+- `title` - Page headings and fallback for SEO
+- `seo_title` - Optional separate `<title>` tag for search engines
+- Automatic fallback system
+
+### Meta Descriptions
+- `description` - Custom meta description
+- Auto-generation from summary or content
+- Configurable length via `seo_summary_length`
+
+### URL Control
+- `slug` - Custom URL slugs
+- Flexible permalink structure
+- Automatic canonical tags
+
+### Social Media
+- Open Graph for Facebook/LinkedIn
+- Twitter Cards
+- Structured data for search engines
+
+## Services Templates
+
+The theme includes templates for service businesses:
+
+```
+content/
+└── services/
+    ├── _index.md           # Services listing page
+    ├── service-one.md
+    └── service-two.md
+```
+
+Service frontmatter:
+```yaml
+---
+title: "Service Name"
+description: "Service description"
+price_range: "Starting at $X"
+featured_image: "/images/service.jpg"
+features:
+  - "Feature 1"
+  - "Feature 2"
+benefits:
+  - text: "Benefit description"
+    image: "/images/benefit.jpg"
+cta_text: "Get Started"
+cta_link: "/contact/"
+---
+```
 
 ## Content Structure
 
 ```
 content/
-├── _index.md          # Homepage content
+├── _index.md          # Homepage
 ├── about.md           # About page
-└── posts/             # Blog posts (or any name you prefer)
-    ├── _index.md      # Blog listing page
-    ├── my-first-post.md
-    └── another-post.md
-```
-
-## URL Structure Options
-
-### Option 1: Posts Folder (Recommended)
-```yaml
-permalinks:
-  posts: "/posts/:slug/"
-```
-URLs: `yoursite.com/posts/your-post-title/`
-
-### Option 2: Root Level
-```yaml
-permalinks:
-  posts: "/:slug/"
-```
-URLs: `yoursite.com/your-post-title/`
-
-## SEO Best Practices
-
-### Title Optimization
-```yaml
-title: "Complete Guide to Hugo Themes"
-seo_title: "Hugo Themes Guide 2024 - Build Fast Static Sites"
-```
-
-### Description Optimization
-```yaml
-description: "Learn how to choose and customize Hugo themes for lightning-fast static websites. Complete 2024 guide with examples."
-```
-
-### Summary for Social Sharing
-```yaml
-summary: "A comprehensive guide covering everything you need to know about Hugo themes, from selection to customization."
-```
-
-### Featured Images
-```yaml
-featured_image: "/images/hugo-themes-guide.jpg"
+├── contact.md         # Contact page
+├── posts/             # Blog posts
+│   ├── _index.md
+│   └── post-one.md
+└── services/          # Services (optional)
+    ├── _index.md
+    └── service-one.md
 ```
 
 ## Customization
 
 ### Creating Custom Color Themes
 
-Add new themes in `static/css/style.css`:
+Add to `static/css/style.css`:
 
 ```css
 body.theme-custom {
-    --accent-color: #your-color;
-    --accent-hover: #your-hover-color;
+    --accent-color: #hexcode;
+    --accent-hover: #hexcode;
+}
+```
+
+For dark themes, also define:
+```css
+body.theme-custom {
+    --accent-color: #hexcode;
+    --accent-hover: #hexcode;
+    --text-primary: #hexcode;
+    --text-secondary: #hexcode;
+    --bg-primary: #hexcode;
+    --bg-card: #hexcode;
+    --bg-white: #hexcode;
+    --border-light: #hexcode;
 }
 ```
 
@@ -216,27 +200,18 @@ Change fonts in `layouts/_default/baseof.html`:
 <link href="https://fonts.googleapis.com/css2?family=YourFont:wght@400;500;600;700&display=swap" rel="stylesheet">
 ```
 
-### Highlighting Text
-
-Use the highlight class for accent-colored text:
-
-```html
-<span class="highlight">highlighted text</span>
+Then update CSS:
+```css
+body {
+    font-family: 'YourFont', sans-serif;
+}
 ```
-
-## Development
-
-1. Fork the repository
-2. Make your changes
-3. Test with a Hugo site
-4. Submit a pull request
 
 ## License
 
-This theme is released under the MIT License. See [LICENSE](LICENSE) for details.
+MIT License. See [LICENSE](LICENSE) for details.
 
 ## Credits
 
 - Built with [Hugo](https://gohugo.io/)
-- Typography powered by [Inter](https://fonts.google.com/specimen/Inter)
-- Inspired by modern, clean web design principles 
+- Typography: [Inter](https://fonts.google.com/specimen/Inter)
