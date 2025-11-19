@@ -1,6 +1,6 @@
 # Clean Base Hugo Theme
 
-A clean, minimal Hugo theme with comprehensive SEO features and 6 beautiful color themes. Built with modern web standards and inspired by elegant design principles.
+A clean, minimal Hugo theme with comprehensive SEO features and 7 beautiful color themes. Built with modern web standards and inspired by elegant design principles.
 
 ## Features
 
