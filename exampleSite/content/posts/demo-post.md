@@ -1,14 +1,14 @@
 ---
 title: "The Art of Modern Web Design"
 seo_title: "Modern Web Design Principles 2025 - Complete Guide"
-date: 2023-12-01T10:00:00-05:00
+date: 2025-11-19T10:00:00-05:00
 draft: false
 slug: "modern-web-design-guide"
 description: "Explore the fundamental principles of modern web design, from typography and color theory to user experience and responsive layouts."
 summary: "A comprehensive guide covering the essential elements of contemporary web design, perfect for designers and developers looking to create stunning digital experiences."
 tags: ["design", "web development", "typography", "user experience"]
 author: "Ian Howells"
-featured_image: "/images/web-design-guide.jpg"
+featured_image: "https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 toc: true
 noindex: false
 ---

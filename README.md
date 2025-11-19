@@ -6,7 +6,7 @@ A clean, minimal Hugo theme with comprehensive SEO features and 6 beautiful colo
 
 - **SEO Optimized** - Complete meta tags, Open Graph, Twitter Cards, canonical URLs
 - **Flexible Content** - Separate titles for display and SEO, custom summaries, slug control
-- **6 Beautiful Color Themes** (Pink, Blue, Green, Red, Orange, Purple)
+- **7 Beautiful Color Themes** (Pink, Blue, Green, Red, Orange, Purple, Tokyo Night)
 - **Responsive Design** - Mobile-first, clean typography
 - **Post Cards** - Beautiful blog post previews with smart summaries
 - **Permalink Control** - Use `/posts/` or root-level URLs
@@ -79,7 +79,7 @@ permalinks:
 
 params:
   # Color theme
-  color_theme: "pink"  # pink, blue, green, red, orange, purple
+  color_theme: "pink"  # pink, blue, green, red, orange, purple, tokyo-night
   
   # SEO Settings
   description: "Your site's default meta description"
@@ -132,7 +132,7 @@ noindex: false                           # Optional: Prevent search indexing
 
 ### Color Themes
 
-The theme includes 6 beautiful color options:
+The theme includes 7 beautiful color options:
 
 - <span style="display: inline-block; width: 16px; height: 16px; background-color: #d4a49a; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Pink** (`pink`) - *Default* - Soft dusty pink
 - <span style="display: inline-block; width: 16px; height: 16px; background-color: #276FBF; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Blue** (`blue`) - Professional blue
@@ -140,6 +140,7 @@ The theme includes 6 beautiful color options:
 - <span style="display: inline-block; width: 16px; height: 16px; background-color: #9A031E; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Red** (`red`) - Bold red
 - <span style="display: inline-block; width: 16px; height: 16px; background-color: #E36414; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Orange** (`orange`) - Vibrant orange
 - <span style="display: inline-block; width: 16px; height: 16px; background-color: #351431; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Purple** (`purple`) - Deep purple
+- <span style="display: inline-block; width: 16px; height: 16px; background-color: #7aa2f7; border-radius: 3px; margin-right: 8px; vertical-align: middle;"></span>**Tokyo Night** (`tokyo-night`) - Cool blue inspired by Tokyo Night theme
 
 ## Content Structure
 

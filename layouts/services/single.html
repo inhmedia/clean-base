@@ -1,0 +1,132 @@
+{{ define "main" }}
+<!-- Hero Section with Split Layout -->
+<section class="service-hero-split">
+    <div class="hero-split-wrapper">
+        {{ if .Params.featured_image }}
+            <div class="hero-image">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+            </div>
+        {{ end }}
+        <div class="hero-content">
+            <h1 class="service-hero-title">{{ .Title }}</h1>
+            {{ if .Params.description }}
+                <p class="service-hero-description">{{ .Params.description }}</p>
+            {{ end }}
+            {{ if or .Params.cta_text .Site.Params.default_service_cta }}
+                <a href="{{ .Params.cta_link | default "/contact/" }}" class="hero-cta-button">
+                    {{ .Params.cta_text | default "Get Started" }}
+                </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section (if exists) -->
+{{ if .Params.price_range }}
+    <section class="service-pricing-section">
+        <div class="container">
+            <div class="pricing-box">
+                <span class="pricing-label">Investment</span>
+                <span class="pricing-value">{{ .Params.price_range }}</span>
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+<!-- Main Content Section -->
+{{ if .Content }}
+    <section class="service-main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+<!-- Features Grid Section -->
+{{ if .Params.features }}
+    <section class="service-features-section">
+        <div class="container">
+            <h2 class="section-title">What's Included</h2>
+            <div class="features-grid">
+                {{ range .Params.features }}
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">{{ . }}</div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+<!-- Benefits Section (Alternating Layout) -->
+{{ if .Params.benefits }}
+    <section class="service-benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose This Service</h2>
+            <div class="benefits-alternating">
+                {{ range $index, $benefit := .Params.benefits }}
+                    {{ $benefitData := $benefit }}
+                    {{ if reflect.IsMap $benefit }}
+                        <div class="benefit-row {{ if modBool $index 2 }}reverse{{ end }}">
+                            <div class="benefit-content">
+                                <div class="benefit-number">{{ add $index 1 }}</div>
+                                <p>{{ $benefit.text }}</p>
+                            </div>
+                            <div class="benefit-visual">
+                                {{ if $benefit.image }}
+                                    <img src="{{ $benefit.image }}" alt="{{ $benefit.text }}">
+                                {{ else }}
+                                    <div class="benefit-decoration"></div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ else }}
+                        <div class="benefit-row {{ if modBool $index 2 }}reverse{{ end }}">
+                            <div class="benefit-content">
+                                <div class="benefit-number">{{ add $index 1 }}</div>
+                                <p>{{ $benefit }}</p>
+                            </div>
+                            <div class="benefit-visual">
+                                <div class="benefit-decoration"></div>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+<!-- Call to Action Section -->
+<section class="service-cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Ready to Get Started?</h2>
+            <p>Let's discuss how {{ .Title }} can help your business grow.</p>
+            <a href="{{ .Params.cta_link | default "/contact/" }}" class="cta-button-large">
+                {{ .Params.cta_text | default "Request a Quote" }}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Related Services -->
+{{ if .Site.Params.show_related_services }}
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ with $related }}
+        <section class="related-services-section">
+            <div class="container">
+                <h2 class="section-title">Related Services</h2>
+                <div class="related-services-grid">
+                    {{ range . }}
+                        {{ partial "service-card.html" . }}
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+    {{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="container">
+    <!-- Page Header -->
+    <header class="page-header services-header">
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ if .Content }}
+            <div class="page-description">
+                {{ .Content }}
+            </div>
+        {{ end }}
+    </header>
+
+    <!-- Services Grid -->
+    {{ $services := .Pages }}
+    {{ if gt (len $services) 0 }}
+        <div class="services-grid">
+            {{ range $services }}
+                {{ partial "service-card.html" . }}
+            {{ end }}
+        </div>
+    {{ else }}
+        <p class="no-services">No services available at this time.</p>
+    {{ end }}
+</div>
+{{ end }}

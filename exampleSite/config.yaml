@@ -21,20 +21,23 @@ menu:
     - name: "Home"
       url: "/"
       weight: 1
+    - name: "Services"
+      url: "/services/"
+      weight: 2
     - name: "Blog"
       url: "/posts/"
-      weight: 2
+      weight: 3
     - name: "About"
       url: "/about/"
-      weight: 3
+      weight: 4
     - name: "Contact"
       url: "/contact/"
-      weight: 4
+      weight: 5
 
 # Theme parameters
 params:
-  # Color theme (pink, blue, green, red, orange, purple)
-  color_theme: "pink"
+  # Color theme (pink, blue, green, red, orange, purple, tokyo-night)
+  color_theme: "tokyo-night"
   
   # SEO Settings
   description: "A beautiful, minimal Hugo theme with comprehensive SEO features and multiple color options."
@@ -48,12 +51,16 @@ params:
   
   # Post page settings
   show_related_posts: true
+
+  # Service page settings
+  show_related_services: true
+  default_service_cta: true
   
   # Footer
   footer_text: "Built with Hugo and Clean Base theme"
-  
-  # Logo
-  logo: "/images/logo.svg"
+
+  # Logo (commented out to use text logo instead)
+  # logo: "/images/logo.svg"
 
 # Social media profiles (for structured data)
 social:

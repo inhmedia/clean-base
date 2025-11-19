@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2023-12-01T10:00:00-05:00
+date: 2025-11-19T10:00:00-05:00
 draft: false
 description: "Learn more about our mission and what we do."
 ---

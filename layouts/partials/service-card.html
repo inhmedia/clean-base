@@ -1,0 +1,33 @@
+<div class="service-card">
+    <a href="{{ .RelPermalink }}" class="service-card-link">
+        {{ if .Params.featured_image }}
+            <div class="service-card-image">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+            </div>
+        {{ end }}
+
+        <div class="service-card-content">
+            <h3 class="service-card-title">{{ .Title }}</h3>
+
+            {{ if .Params.price_range }}
+                <div class="service-card-price">{{ .Params.price_range }}</div>
+            {{ end }}
+
+            {{ if .Params.description }}
+                <p class="service-card-description">{{ .Params.description }}</p>
+            {{ else if .Summary }}
+                <p class="service-card-description">{{ .Summary | truncate 150 | plainify }}</p>
+            {{ end }}
+
+            {{ if .Params.features }}
+                <ul class="service-card-features">
+                    {{ range first 3 .Params.features }}
+                        <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+
+            <span class="service-card-cta">Learn More →</span>
+        </div>
+    </a>
+</div>

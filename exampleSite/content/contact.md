@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-date: 2023-12-01T10:00:00-05:00
+date: 2025-11-19T10:00:00-05:00
 draft: false
 description: "Get in touch with us. We'd love to hear from you."
 ---
