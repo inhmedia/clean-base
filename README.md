@@ -2,6 +2,8 @@
 
 A clean, minimal Hugo theme with comprehensive SEO features and 7 beautiful color themes. Built with modern web standards and inspired by elegant design principles.
 
+![Clean Base Theme Screenshot](images/screenshot.png)
+
 ## Features
 
 - **SEO Optimized** - Complete meta tags, Open Graph, Twitter Cards, canonical URLs
