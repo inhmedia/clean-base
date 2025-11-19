@@ -8,13 +8,14 @@
                     <span class="logo-text">{{ .Site.Title }}</span>
                 {{ end }}
             </a>
-            
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox" aria-label="Toggle mobile menu">
+            <label for="mobile-menu-toggle" class="mobile-menu-toggle">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
-            </button>
-            
+            </label>
+
             <nav class="main-nav" id="main-nav">
                 {{ range .Site.Menus.main }}
                     <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">

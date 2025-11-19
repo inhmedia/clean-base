@@ -1,9 +1,10 @@
 {{ if and .Params.toc .TableOfContents }}
 <div class="table-of-contents">
-    <button class="toc-toggle" aria-expanded="false" aria-controls="toc-content">
+    <input type="checkbox" id="toc-toggle" class="toc-checkbox" aria-label="Toggle table of contents">
+    <label for="toc-toggle" class="toc-toggle">
         <h3 class="toc-title">Table of Contents</h3>
         <span class="toc-arrow">▼</span>
-    </button>
+    </label>
     <div class="toc-content" id="toc-content">
         {{ .TableOfContents }}
     </div>
